@@ -1,15 +1,18 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 # Create your views here.
 
 def HomeView(request):
-    pass
+    return render(request,'home.html')
 
 def AboutView(request):
-    pass
+    return render(request,'about.html')
 
 def MenuView(request):
-    pass
+    return render(request,'menu.html')
 
 def BookTableView(request):
-    pass
+    return render(request,'book_table.html')
+
+def FeedbackView(request):
+    return HttpResponse("Hi, this is my feedback page.")
