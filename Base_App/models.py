@@ -13,7 +13,7 @@ class Item(models.Model):
     description = models.TextField(blank=False)
     Price = models.IntegerField()
     Category = models.ForeignKey(ItemList, related_name="Name", on_delete=models.CASCADE)
-    Image = models.ImageField(upload_to='images/')
+    Image = models.ImageField(upload_to='items/')
     
     def __str__(self):
         return self.Item_name
@@ -26,6 +26,7 @@ class Feedback(models.Model):
     User_name = models.CharField(max_length=15)
     Description = models.TextField()
     Rating = models.IntegerField()
+    Image = models.ImageField(upload_to='items/', blank=True)
 
     def __str__(self):
         return self.User_name
