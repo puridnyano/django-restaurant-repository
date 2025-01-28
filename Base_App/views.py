@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from Base_App.models import Item, ItemList, AboutUs, Feedback, BookTable
 from Base_App.models import BookTable
+from Base_App.models import Feedback
 # Create your views here.
 
 def HomeView(request):
@@ -38,4 +39,15 @@ def BookTableView(request):
     return render(request,'book_table.html')
 
 def FeedbackView(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        rating = request.POST.get('rating')
+        image = request.POST.get('image')
+
+        data = Feedback(User_name=name,
+                        Description=description,
+                        Rating=rating,
+                        Image=image)
+        data.save()
     return render(request,'feedback.html')
