@@ -18,16 +18,19 @@
                 <p>
                   Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
                 </p>
+                {% comment for future enhancement %} 
                 <div class="btn-box">
                   <a href="" class="btn1">
                     Order Now
                   </a>
-                </div>
+                </div> 
+                {% endcomment %}
               </div>
             </div>
           </div>
         </div>
       </div>
+      {% comment %} 
       <div class="carousel-item ">
         <div class="container ">
           <div class="row">
@@ -69,7 +72,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
+      {% endcomment %}
     </div>
     <div class="container">
       <ol class="carousel-indicators">
@@ -969,7 +973,7 @@
     <div class="row">
       <div class="col-md-6 ">
         <div class="img-box">
-          <img src="images/about-img.png" alt="">
+          <img src="{% static 'images/about-img.png' %}" alt="">
         </div>
       </div>
       <div class="col-md-6">
